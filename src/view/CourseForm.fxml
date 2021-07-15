@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="605.0" prefWidth="711.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CourseFormController">
+   <children>
+      <Label layoutX="17.0" prefHeight="53.0" prefWidth="260.0" text=" Training Programs" textFill="#7a18ab">
+         <font>
+            <Font name="Bell MT Bold" size="27.0" />
+         </font>
+      </Label>
+      <Separator layoutX="7.0" layoutY="42.0" prefHeight="36.0" prefWidth="697.0" />
+      <Label layoutX="25.0" layoutY="93.0" prefHeight="23.0" prefWidth="111.0" text="Program CodeNo" textFill="#5516c3">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCode" editable="false" layoutX="141.0" layoutY="92.0" prefHeight="25.0" prefWidth="103.0">
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </TextField>
+      <Label layoutX="24.0" layoutY="129.0" prefHeight="19.0" prefWidth="127.0" text="Program" textFill="#5516c3">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="187.0" prefHeight="19.0" prefWidth="237.0" text="Duration (year/month)" textFill="#5516c3">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFee" layoutX="358.0" layoutY="216.0" prefHeight="25.0" prefWidth="305.0" />
+      <Button fx:id="btnUpdate" layoutX="294.0" layoutY="265.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="29.0" prefWidth="91.0" style="-fx-background-color: #FFB914;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnSave" layoutX="397.0" layoutY="265.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="29.0" prefWidth="91.0" style="-fx-background-color: #00D700;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="559.0" layoutY="25.0" mnemonicParsing="false" onAction="#btnNewProgramOnAction" prefHeight="23.0" prefWidth="138.0" style="-fx-background-color: blue;" text="+ New Program" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="txtProgram" layoutX="22.0" layoutY="154.0" prefHeight="25.0" prefWidth="637.0" />
+      <Label layoutX="361.0" layoutY="189.0" prefHeight="19.0" prefWidth="227.0" text="Fee (LKR)" textFill="#5516c3">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCourse" layoutX="18.0" layoutY="320.0" prefHeight="274.0" prefWidth="680.0">
+         <columns>
+            <TableColumn fx:id="clmCode" prefWidth="93.0" text="Code" />
+            <TableColumn fx:id="clmcName" prefWidth="227.0" text="Program" />
+            <TableColumn fx:id="clmDuration" prefWidth="158.0" text="Duration" />
+            <TableColumn fx:id="clmcFee" prefWidth="201.0" text="Fee (LKR)" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnDelete" layoutX="189.0" layoutY="265.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="29.0" prefWidth="91.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="txtDuration" layoutX="21.0" layoutY="215.0" prefHeight="25.0" prefWidth="317.0" />
+   </children>
+</AnchorPane>
